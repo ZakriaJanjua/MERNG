@@ -1,0 +1,26 @@
+.table {
+	margin-left: auto;
+	margin-right: auto;
+	table-layout: fixed;
+	width: 90%;
+	margin-top: 5%;
+}
+
+td {
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #e7e7e7;
+}
+
+.delete_button {
+	background-color: #ff0000;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+}

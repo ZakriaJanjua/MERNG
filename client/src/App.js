@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import Header from './components/Header/Header';
 import Client from './components/Client/Client';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import AddClientForm from './components/AddClientForm/AddClientForm';
 
 const cache = new InMemoryCache({
 	typePolicies: {
@@ -32,6 +33,7 @@ function App() {
 		<Fragment>
 			<ApolloProvider client={client}>
 				<Header />
+				<AddClientForm />
 				<Client />
 			</ApolloProvider>
 		</Fragment>

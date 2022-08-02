@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import Header from './components/Header/Header';
 import Client from './components/Client/Client';
+import Project from './components/Project/Project';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import AddClientForm from './components/AddClientForm/AddClientForm';
 
@@ -35,6 +36,7 @@ function App() {
 				<Header />
 				<AddClientForm />
 				<Client />
+				<Project />
 			</ApolloProvider>
 		</Fragment>
 	);

@@ -1,8 +1,8 @@
 import { useQuery, useMutation } from '@apollo/client';
-import './Client.css';
+import './Clients.css';
 import { GET_CLIENTS } from '../../queries/clientQueries';
 import { DELETE_CLIENT } from '../../mutations/clientMutations';
-const Client = () => {
+const Clients = () => {
 	const { loading, error, data } = useQuery(GET_CLIENTS);
 	const [deleteClient] = useMutation(DELETE_CLIENT);
 
@@ -64,4 +64,4 @@ const Client = () => {
 	}
 };
 
-export default Client;
+export default Clients;

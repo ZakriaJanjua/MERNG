@@ -1,0 +1,39 @@
+.container-notfound {
+   display: block;
+   margin-top: 10vh;
+}
+.heading {
+   font-size:2.5rem;
+   font-weight: 300;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+
+.bigger-heading {
+   font-size: 9rem;
+   margin: 0rem;
+   padding: 0;
+}
+
+.button-notfound {
+   display: block;
+   margin: 1rem auto;
+   padding: 0.5rem;
+   border: none;
+   border-radius: 0.5rem;
+   background-color: #d4006d;
+   font-size: large;
+   color: white;
+   cursor: pointer;
+}
+.button-notfound:hover {
+   background-color: #a70051;
+}
+.button-notfound:active {
+   background-color: #690019;
+}
+
+.link {
+   text-decoration: none;
+}

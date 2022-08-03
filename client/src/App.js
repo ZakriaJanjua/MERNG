@@ -1,10 +1,8 @@
 import { Fragment } from 'react';
-import Header from './components/Header/Header';
-import Client from './components/Client/Client';
-import Project from './components/Project/Project';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import AddClientForm from './components/AddClientForm/AddClientForm';
-
+import { BrowserRouter, Route, Routes} from 'react-router-dom'
+import Home from './pages/Home/Home';
+import NotFound from './pages/Not Found/NotFound';
 const cache = new InMemoryCache({
 	typePolicies: {
 		Query: {
@@ -33,10 +31,12 @@ function App() {
 	return (
 		<Fragment>
 			<ApolloProvider client={client}>
-				<Header />
-				<AddClientForm />
-				<Client />
-				<Project />
+				<BrowserRouter>
+					<Routes>
+						<Route path='/' element={<Home />}/>
+						<Route path='*' element={<NotFound />}/>
+					</Routes>
+				</BrowserRouter>
 			</ApolloProvider>
 		</Fragment>
 	);

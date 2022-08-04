@@ -1,0 +1,35 @@
+.project-container {
+   max-width: fit-content;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 10vh;
+   border: 2px solid rgba(0, 0, 0, 0.608);
+   padding: 2rem 6rem;
+   border-radius: 20px;
+}
+.project-heading {
+   text-align: center;
+   font-size: 5rem;
+   margin: 0;
+   font-weight: 300;
+}
+
+.project-description {
+   font-size: 1.5rem;
+   margin: 5px 0px;
+   color: grey;
+}
+
+.project-status-single {
+   margin-bottom: 0.5rem;
+   font-size: large;
+   font-weight: bold;
+   color: darkslateblue;
+}
+
+hr {
+   border: 1px solid black;
+   background-color: black;
+}
+

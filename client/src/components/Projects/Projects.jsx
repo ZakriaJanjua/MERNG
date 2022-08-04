@@ -4,7 +4,6 @@ import { GET_PROJECTS } from '../../queries/projectQueries';
 
 export default function Projects() {
 	const { data, loading, error } = useQuery(GET_PROJECTS);
-	console.log(data);
 	if (loading) return <div>Loading...</div>;
 	else if (error) return <div>{error}</div>;
 	else if (!loading && !error) {

@@ -1,5 +1,5 @@
 import { useMutation } from '@apollo/client';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import { ADD_CLIENT } from '../../mutations/clientMutations';
 import { GET_CLIENTS } from '../../queries/clientQueries';
 import './AddClientForm.css';
@@ -42,7 +42,7 @@ const AddClientForm = () => {
 		setFormData({ name: '', email: '', phone: '' });
 	};
 	return (
-		<Fragment>
+		<div className='addclientform-container'>
 			<button className='button' onClick={handleClick}>
 				Add Client
 			</button>
@@ -75,7 +75,7 @@ const AddClientForm = () => {
 					/>
 				</div>
 			</form>
-		</Fragment>
+		</div>
 	);
 };
 

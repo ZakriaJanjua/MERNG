@@ -1,0 +1,42 @@
+.addProjectForm-container {
+   width: 70%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   border: 1px solid grey;
+   padding: 2rem;
+   margin-top: 1rem;
+   border-radius: 20px;
+}
+
+.button-addProject {
+   display: block;
+   margin: auto;
+   margin-bottom: 1.5rem;
+   padding: 0.5rem;
+   border: none;
+   border-radius: 0.5rem;
+   background-color: #1200d4;
+   font-size: large;
+   color: white;
+   cursor: pointer;
+}
+
+.button-addProject:hover {
+   background-color: #0e00a7;
+}
+
+.button-addProject:active {
+   background-color: #000769;
+}
+
+.addProject-form {
+   display: flex;
+   justify-content: center;
+   column-gap: 2rem;
+}
+
+select {
+   padding: 0.5rem;
+   font-size: 16px;
+}

@@ -1,11 +1,12 @@
 .addclientform-container {
-   border: 1px solid black;
-   width: 59%;
+   border: 1px solid grey;
+   width: 70%;
    display: block;
    margin-left: auto;
    margin-right: auto;
    padding: 2rem;
    margin-top: 1rem;
+   border-radius: 20px;
 }
 
 .addClientForm {

@@ -21,6 +21,7 @@ export default function Projects() {
 						<div
 							className='card'
 							onClick={(e) => routingFunction(e, project.id)}
+							key={project.id}
 						>
 							<span>
 								<span className='project-name'>{project.name}</span>

@@ -1,10 +1,14 @@
 import { useState } from 'react';
-import { useQuery } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import './AddProjectForm.css';
 import { GET_CLIENTS } from '../../queries/clientQueries';
+import { GET_PROJECTS } from '../../queries/projectQueries';
+import { ADD_PROJECT } from '../../mutations/projectMutations';
 
 export default function AddProjectForm() {
 	const { data } = useQuery(GET_CLIENTS);
+
+	const [addProject] = useMutation(ADD_PROJECT);
 
 	const [formData, setFormData] = useState({
 		name: '',
@@ -19,7 +23,32 @@ export default function AddProjectForm() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(formData);
+		if (
+			formData.name === '' ||
+			formData.description === '' ||
+			formData.clientId === ''
+		) {
+			alert('Please fill all fields');
+		}
+		addProject({
+			variables: {
+				name: formData.name,
+				description: formData.description,
+				status: formData.status,
+				clientId: formData.clientId,
+			},
+			update(cache, { data: { addProject } }) {
+				const { getAllProjects } = cache.readQuery({
+					query: GET_PROJECTS,
+				});
+				cache.writeQuery({
+					query: GET_PROJECTS,
+					data: {
+						getAllProjects: [...getAllProjects, addProject],
+					},
+				});
+			},
+		});
 		setFormData({
 			name: '',
 			description: '',

@@ -45,3 +45,24 @@ hr {
 	font-size: 1.2rem;
 	color: teal;
 }
+
+.delete-project {
+	float: right;
+	margin: 4rem;
+	border: none;
+	padding: 0.7rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	background-color: red;
+	color: white;
+	font-weight: 600;
+}
+
+.delete-project:hover {
+	background-color: lightcoral;
+	color: black;
+}
+
+.delete-project:active{
+	background-color: pink;
+}

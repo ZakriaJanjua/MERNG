@@ -1,4 +1,5 @@
 import './Project.css';
+import EditProjectForm from '../../components/EditProjectForm/EditProjectForm';
 import { useQuery } from '@apollo/client';
 import { useNavigate, useParams } from 'react-router-dom';
 import { GET_PROJECTS, GET_SINGLE_PROJECT } from '../../queries/projectQueries';
@@ -42,6 +43,9 @@ const Project = () => {
 					<p className='client-details'>{data?.getProject?.client?.name}</p>
 					<p className='client-details'>{data?.getProject?.client?.email}</p>
 					<p className='client-details'>{data?.getProject?.client?.phone}</p>
+					<hr className='bottom-border' />
+					<h2>Edit Project Form</h2>
+					<EditProjectForm />
 				</div>
 			</Fragment>
 		);

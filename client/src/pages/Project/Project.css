@@ -66,3 +66,11 @@ hr {
 .delete-project:active{
 	background-color: pink;
 }
+
+.bottom-border {
+	border-top: 3px dashed red; 
+	background: none; 
+	border-bottom: none;
+	border-right: none;
+	border-left: none
+}

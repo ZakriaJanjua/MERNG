@@ -45,7 +45,7 @@ const Project = () => {
 					<p className='client-details'>{data?.getProject?.client?.phone}</p>
 					<hr className='bottom-border' />
 					<h2>Edit Project Form</h2>
-					<EditProjectForm />
+					<EditProjectForm projectData={data?.getProject} />
 				</div>
 			</Fragment>
 		);

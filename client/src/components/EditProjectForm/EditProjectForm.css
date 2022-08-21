@@ -1,3 +1,22 @@
 input {
    width: 100%;
 }
+
+.editFormButton {
+   margin-top: 1rem;
+   display: block;
+   padding: 0.5rem;
+   border: none;
+   border-radius: 0.5rem;
+   background-color: #d4c900;
+   font-size: large;
+   color: white;
+   cursor: pointer;
+}
+.editFormButton:hover {
+   background-color: #88a700;
+}
+
+.editFormButton:active {
+   background-color: #356900;
+}
